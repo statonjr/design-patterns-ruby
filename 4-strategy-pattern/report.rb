@@ -11,7 +11,7 @@ class Report
   attr_accessor :formatter
 
   # Dependency Injection: We inject the formatter class that we want
-  sig { params(formatter: Formatter).void }
+  sig { params(formatter: T.any(HTMLFormatter, PlainTextFormatter)).void }
   def initialize(formatter)
     @title = 'Monthly Report'
     @text =  ['Hello World', 'Is this Smalltalk?']
@@ -20,6 +20,6 @@ class Report
 
   sig { void }
   def output_report
-    @formatter.output_report(@title, @text)
+    @formatter.output_report(self)
   end
 end
