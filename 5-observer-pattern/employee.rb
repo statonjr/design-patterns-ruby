@@ -19,6 +19,7 @@ class Employee
     @salary = salary
   end
 
+  sig { params(new_salary: Integer).void }
   def salary=(new_salary)
     @salary = new_salary
     changed
