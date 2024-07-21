@@ -7,7 +7,7 @@ require 'sorbet-runtime'
 class Report
   extend T::Sig
 
-  sig { params(title: String, text: Array[String]).void }
+  sig { params(title: String, text: T::Array[String]).void }
   def initialize(title: 'Sample Report', text: ['Hello world'])
     @title = title
     @text = text
