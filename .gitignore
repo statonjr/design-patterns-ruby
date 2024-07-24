@@ -3,3 +3,5 @@ bin
 sorbet
 file1.txt
 file2.txt
+message.encrypted
+out.txt
